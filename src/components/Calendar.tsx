@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "@fullcalendar/react/dist/vdom-test-react18";
 import { Calendar } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import { useNavigate } from "react-router";
 
-interface CalendarProps {}
 
 export const NFCalendar = () => {
   const navigate = useNavigate();

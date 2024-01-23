@@ -1,5 +1,3 @@
-import { NFCalendar } from "./Calendar";
-
 export default function Component() {
   return (
     <div key="1" className="flex flex-col min-h-screen">
@@ -85,8 +83,9 @@ export default function Component() {
                     meaningful to them. The ceremony becomes a celebration of
                     life, love, and the enduring connection shared with the
                     departed. In this private and personalized setting, families
-                    can find solace and comfort making the sea memorial service a profoundly
-                    special and healing experience during a challenging time.
+                    can find solace and comfort making the sea memorial service
+                    a profoundly special and healing experience during a
+                    challenging time.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -94,7 +93,7 @@ export default function Component() {
                     className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                     href="#"
                   >
-                    Contact Us 
+                    Contact Us
                   </a>
                   <a
                     className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
@@ -152,7 +151,7 @@ export default function Component() {
                   goodbyes."
                 </p>
                 <p className="mt-4 text-gray-700 dark:text-gray-300 font-semibold">
-                  - Rebecca K. - Manahawkin, NJ 
+                  - Rebecca K. - Manahawkin, NJ
                 </p>
               </div>
             </div>
@@ -189,6 +188,15 @@ export default function Component() {
               </div>
             </div>
             <div className="w-full flex flex-col mt-10 justify-center items-center">
+              <div className="flex flex-col items-center justify-center mb-20 font-bold">
+                <div className="text-3xl">Contact Us By Phone</div>
+                <div className="flex flex-col items-center justify-center">
+                  <div className="mx-2 text-lg">732-232-5620</div>
+                  <div className="mx-2 text-lg">732-892-4298</div>
+                </div>
+              </div>
+
+              
               <div className="font-bold text-2xl">Contact Us</div>
               <form className=" min-w-[300px] space-y-4">
                 <div className="space-y-2">
@@ -259,4 +267,3 @@ export default function Component() {
     </div>
   );
 }
-

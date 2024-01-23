@@ -79,7 +79,6 @@ const Booking: React.FC<BookingProps> = ({}) => {
               </button>
               <select
                 aria-hidden="true"
-                tabIndex="-1"
                 style={{
                   position: "absolute",
                   border: "0px",
@@ -129,7 +128,7 @@ const Booking: React.FC<BookingProps> = ({}) => {
           </button>
         </div>
       </div>
-      {isPaypalShowing && (<Paypal />)}
+      {isPaypalShowing && (<Paypal  id="hi" pageData={{}}/>)}
     </div>
   );
 };

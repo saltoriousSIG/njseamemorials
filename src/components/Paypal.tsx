@@ -41,6 +41,7 @@ const Paypal: React.FC<PaypalProps> = (props) => {
         },
         // Finalize the transaction after payer approval
         onApprove:  (data: any, actions: any) => {
+          console.log(data)
           return actions.order.capture().then(function (orderData: any) {
             // Successful capture! For dev/demo purposes:
             console.log(
@@ -72,7 +73,7 @@ const Paypal: React.FC<PaypalProps> = (props) => {
 
   const [acceptPolicy, setAcceptPolicy] = useState(false);
 
-  const handlePolicyAccept = useCallback((e) => {
+  const handlePolicyAccept = useCallback((e: any) => {
     e.preventDefault();
     if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
     if (!pageData.scheduledDate) return swal ('Error', 'You forgot to select a date!', 'error');

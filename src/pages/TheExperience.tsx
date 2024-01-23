@@ -1,5 +1,3 @@
-import React from "react";
-
 const TheExperiece = () => {
   return (
     <div className="relative flex items-center justify-start">
@@ -11,7 +9,7 @@ const TheExperiece = () => {
         <div className="space-y-6 max-w-[75%] m-auto">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/nearfall_inlet.jpeg"
+              src="/src/assets/dauntless_open.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />
@@ -66,7 +64,7 @@ const TheExperiece = () => {
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/dauntless_open.jpeg"
+              src="/src/assets/nearfall_inlet.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />
