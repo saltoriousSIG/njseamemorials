@@ -56,7 +56,7 @@ export const NFCalendar = () => {
     });
 
     calendar.render();
-    const events = calendar.getEventSources();
+    //const events = calendar.getEventSources();
   }, []);
 
   return (
