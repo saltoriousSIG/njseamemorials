@@ -85,8 +85,7 @@ export default function Component() {
                     meaningful to them. The ceremony becomes a celebration of
                     life, love, and the enduring connection shared with the
                     departed. In this private and personalized setting, families
-                    can find solace and comfort as they bid farewell to their
-                    loved ones, making the sea memorial service a profoundly
+                    can find solace and comfort making the sea memorial service a profoundly
                     special and healing experience during a challenging time.
                   </p>
                 </div>
