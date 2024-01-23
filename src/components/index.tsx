@@ -2,7 +2,7 @@ export default function Component() {
   return (
     <div key="1" className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 h-[100vh] bg-[url('/src/assets/hero.jpg')] bg-no-repeat bg-cover bg-center">
+        <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 h-[100vh] bg-[url('/assets/hero.jpg')] bg-no-repeat bg-cover bg-center">
           <div className="absolute h-full w-full top-0 left-0 bg-black z-[3] opacity-80" />
           <div className="relative container px-4 md:px-6 z-10 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -40,14 +40,14 @@ export default function Component() {
                   alt="Image"
                   className="mx-auto aspect-video my-3 h-[300px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                   height="100"
-                  src="/src/assets/Dauntless.jpeg"
+                  src="/assets/Dauntless.jpeg"
                   width="200"
                 />
                 <img
                   alt="Image"
                   className="mx-auto aspect-video my-3 h-[300px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                   height="100"
-                  src="/src/assets/nearfall.jpeg"
+                  src="/assets/nearfall.jpeg"
                   width="200"
                 />
               </div>

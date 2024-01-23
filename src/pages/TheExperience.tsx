@@ -9,7 +9,7 @@ const TheExperiece = () => {
         <div className="space-y-6 max-w-[75%] m-auto">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/dauntless_open.jpeg"
+              src="/assets/dauntless_open.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />
@@ -28,7 +28,7 @@ const TheExperiece = () => {
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/nearfall_inlet_2.jpeg"
+              src="/assets/nearfall_inlet_2.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />
@@ -46,7 +46,7 @@ const TheExperiece = () => {
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/dauntless_inlet.jpeg"
+              src="/assets/dauntless_inlet.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />
@@ -64,7 +64,7 @@ const TheExperiece = () => {
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
             <img
-              src="/src/assets/nearfall_inlet.jpeg"
+              src="/assets/nearfall_inlet.jpeg"
               alt="Placeholder"
               className="w-full h-auto mb-4 rounded h-[250px] w-auto"
             />

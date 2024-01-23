@@ -55,7 +55,7 @@ const Nav: React.FC<NavProps> = ({}) => {
       </header>
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <a className="flex items-center justify-center" href="#">
-          <img className="h-[35px] w-auto" src='/src/assets/seamemorial_bg.png'/>
+          <img className="h-[35px] w-auto" src='/assets/seamemorial_bg.png'/>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a
