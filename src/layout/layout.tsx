@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router";
-import Nav from "../components/Nav";
 import { Outlet } from "react-router";
 import Splash from "../components/Splash";
 import PageSplash from "../components/PageSplash";
