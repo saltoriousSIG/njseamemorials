@@ -1,10 +1,10 @@
 import React from "react";
 
-interface PoliciesProps {}
+interface PoliciesProps { }
 
-const Policies:React.FC<PoliciesProps> = () => {
+const Policies: React.FC<PoliciesProps> = () => {
   return (
-    <div className="container mx-auto px-4 py-6 text-white">
+    <div className="mx-auto px-4 py-6 text-white bg-white">
       <h1 className="text-4xl font-semibold text-center mb-8">
         Policies
       </h1>

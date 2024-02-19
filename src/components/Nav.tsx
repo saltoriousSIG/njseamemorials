@@ -19,7 +19,7 @@ const Nav: React.FC<NavProps> = () => {
           </a>
           <a
             className="text-lg hover:text-white font-medium hover:underline underline-offset-4 text-[#1E1E1E]"
-            href="/"
+            href="#about"
           >
             About
           </a>

@@ -1,7 +1,7 @@
 import React from "react";
 import PriceCard from "../components/PriceCard";
 
-interface PricesProps {}
+interface PricesProps { }
 
 const priceItems = [
   {
@@ -43,11 +43,11 @@ const priceItems = [
 ];
 const Prices: React.FC<PricesProps> = () => {
   return (
-    <div className="relative h-[90vh] flex items-center justify-center">
+    <div className="relative h-[90vh] flex items-center justify-center bg-white">
       <div className=" max-w-[65%] m-auto flex-wrap gap-x-20 gap-y-6 flex justify-center">
-      {priceItems.map((item) => (
-        <PriceCard {...item} />
-      ))}
+        {priceItems.map((item) => (
+          <PriceCard {...item} />
+        ))}
       </div>
     </div>
   );
