@@ -57,12 +57,12 @@ export const NFCalendar = () => {
 
     calendar.render();
     //const events = calendar.getEventSources();
-  }, []);
+  }, [navigate]);
 
   return (
-    <div className="container">
+    <div className="container !bg-white">
       <h2>Calendar</h2>
-      <div id="calendar"></div>
+      <div id="calendar" className="!bg-white"></div>
     </div>
   );
 };

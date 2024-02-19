@@ -1,61 +1,32 @@
+
 export default function Component() {
   return (
     <div key="1" className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 h-[100vh] bg-[url('/assets/hero.jpg')] bg-no-repeat bg-cover bg-center">
-          <div className="absolute h-full w-full top-0 left-0 bg-black z-[3] opacity-80" />
-          <div className="relative container px-4 md:px-6 z-10 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  NJ Sea Memorial Service
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Engage in a beautiful farewell, scattering ashes upon the
-                  waves, where each ripple tells the story of a life well lived
-                </p>
+        <section className="w-full py-12 px-20 md:py-24 lg:py-32 bg-white">
+          <div className="container px-4 md:px-6 flex flex-col">
+            <div className="flex items-center justify-center">
+              <div>
+                <img src="/assets/decorator.png" />
               </div>
-              <div className="space-x-4">
-                <a
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  Contact Us
-                </a>
-                <a
-                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  View Calendar
-                </a>
-              </div>
+              <h2 className="text-3xl font-bold text-black crimson-text-regular tracking-tighter text-left  sm:text-4xl md:text-5xl">
+                About Our Sea Burials
+              </h2>
+              <div className="w-[1000px] h-[1px] bg-black ml-10" />
             </div>
-          </div>
-        </section>
-        <section className="w-full py-12 px-20 md:py-24 lg:py-32 bg-slate-500">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-row-reverse w-full items-center justify-around gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
+
+            <div className="flex flex-row-reverse w-full items-center justify-between gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div>
                 <img
                   alt="Image"
-                  className="mx-auto aspect-video my-3 h-[300px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                  height="100"
-                  src="/assets/Dauntless.jpeg"
-                  width="200"
-                />
-                <img
-                  alt="Image"
-                  className="mx-auto aspect-video my-3 h-[300px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                  height="100"
-                  src="/assets/nearfall.jpeg"
+                  className="mx-auto aspect-video my-3 h-[500px] w-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  src="/about_us_img.png"
                   width="200"
                 />
               </div>
               <div className="flex flex-col justify-center items-start space-y-4 text-black">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter text-left  sm:text-4xl md:text-5xl">
-                    About Our Sea Burials
-                  </h2>
+                <div className="space-y-2 poppins-regular">
+
                   <p className="max-w-[600px] text-left text-sm text-black">
                     Our sea memorial service offers families a profoundly unique
                     and deeply personal alternative for laying their loved ones
@@ -87,20 +58,6 @@ export default function Component() {
                     a profoundly special and healing experience during a
                     challenging time.
                   </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <a
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="#"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                    href="#"
-                  >
-                    View Calendar
-                  </a>
                 </div>
               </div>
             </div>
@@ -157,7 +114,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#F8F8FF] text-black">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#F8F8FF] text-black">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
@@ -196,7 +153,7 @@ export default function Component() {
                 </div>
               </div>
 
-              
+
               <div className="font-bold text-2xl">Contact Us</div>
               <form className=" min-w-[300px] space-y-4">
                 <div className="space-y-2">
@@ -251,7 +208,7 @@ export default function Component() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-slate-800">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           © Copyright 2024 NJ Sea Memorial Service. All rights reserved.
         </p>

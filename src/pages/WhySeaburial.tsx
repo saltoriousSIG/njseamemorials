@@ -1,10 +1,10 @@
 import React from "react";
 
-interface WhySeaburialProps {}
+interface WhySeaburialProps { }
 
 const WhySeaburial: React.FC<WhySeaburialProps> = () => {
   return (
-    <div className="relative h-[90vh] flex items-start justify-start">
+    <div className="relative h-[90vh] flex items-start justify-start bg-white">
       <div className="container mx-auto px-4 py-6 space-y-10 mt-20">
         <h1 className="text-4xl font-semibold text-center text-white mb-8">
           Why a Sea Burial?

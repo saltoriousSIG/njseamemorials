@@ -1,6 +1,6 @@
 const TheExperiece = () => {
   return (
-    <div className="relative flex items-center justify-start">
+    <div className="relative flex items-center justify-start bg-white">
       <div className="container mx-auto px-4 relative">
         <h1 className="text-4xl font-semibold text-center text-white my-6">
           The Experience
@@ -11,7 +11,7 @@ const TheExperiece = () => {
             <img
               src="/assets/dauntless_open.jpeg"
               alt="Placeholder"
-              className="w-full h-auto mb-4 rounded h-[250px] w-auto"
+              className=" mb-4 rounded h-[250px] w-auto"
             />
             <h2 className="text-2xl font-bold text-gray-700 mb-3">
               Vessel Journey
@@ -30,7 +30,7 @@ const TheExperiece = () => {
             <img
               src="/assets/nearfall_inlet_2.jpeg"
               alt="Placeholder"
-              className="w-full h-auto mb-4 rounded h-[250px] w-auto"
+              className="mb-4 rounded h-[250px] w-auto"
             />
             <h2 className="text-2xl font-bold text-gray-700 mb-3">
               Customized Ceremony
@@ -48,7 +48,7 @@ const TheExperiece = () => {
             <img
               src="/assets/dauntless_inlet.jpeg"
               alt="Placeholder"
-              className="w-full h-auto mb-4 rounded h-[250px] w-auto"
+              className=" mb-4 rounded h-[250px] w-auto"
             />
             <h2 className="text-2xl font-bold text-gray-700 mb-3">
               Duration and Tribute
@@ -66,7 +66,7 @@ const TheExperiece = () => {
             <img
               src="/assets/nearfall_inlet.jpeg"
               alt="Placeholder"
-              className="w-full h-auto mb-4 rounded h-[250px] w-auto"
+              className=" mb-4 rounded h-[250px] w-auto"
             />
             <h2 className="text-2xl font-bold text-gray-700 mb-3">
               A Serene Farewell
