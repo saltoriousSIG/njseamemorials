@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import { Outlet } from "react-router";
 import Splash from "../components/Splash";
 import PageSplash from "../components/PageSplash";
+import Footer from "../components/Footer";
 
 interface LayoutProps { }
 
@@ -21,6 +22,7 @@ const Layout: React.FC<LayoutProps> = () => {
     <div className="w-full">
       {location.pathname === '/' ? <Splash /> : <PageSplash pageTitle={pageTitles[location.pathname]} />}
       <Outlet />
+      <Footer />
     </div>
   );
 };
