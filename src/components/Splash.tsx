@@ -11,7 +11,7 @@ const Splash: React.FC<SplashProps> = () => {
             <div className='relative z-20'>
                 <Nav />
             </div>
-            <div className="absolute h-full w-full top-0 left-0 bg-[rgba(190,236,255,0.25)] z-[3] opacity-80" />
+            <div className="absolute h-full w-full top-0 left-0 bg-[rgba(190,236,255,0.45)] z-[3] opacity-80" />
             <div className="relative container px-4 md:px-6 z-10 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
                 <div className="flex flex-col items-center space-y-10 text-center -scroll-mb-20">
                     <div>
