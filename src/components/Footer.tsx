@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="flex flex-col space-y-8">
         <div className="flex space-x-4">
           <a
-            href="https://https://www.facebook.com/NJSeaMemorials"
+            href="https://www.facebook.com/NJSeaMemorials"
             target="_blank"
           >
             <img height="50" width="50" src="/public/icons/facebook.svg" />

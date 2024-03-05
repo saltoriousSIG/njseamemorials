@@ -45,7 +45,7 @@ const WhySeaburial: React.FC<WhySeaburialProps> = () => {
             </div>
             <div className="w-1/2 flex items-center justify-center">
               <img
-                src="/assets/dauntless_open.jpeg"
+                src="/assets/history.png"
                 alt="Placeholder"
                 className=" mb-4 rounded h-[400px]  w-auto"
               />
