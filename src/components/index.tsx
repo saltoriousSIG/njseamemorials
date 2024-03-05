@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 
 export default function Component() {
   return (
@@ -15,15 +16,15 @@ export default function Component() {
               <div className="w-[1000px] h-[1px] bg-black ml-10" />
             </div>
 
-            <div className="flex flex-row-reverse w-full items-center justify-between gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px] h-[600px]">
-              <div className="">
+            <div className="flex flex-row-reverse w-full items-center justify-between gap-6 w-full m-auto ml-24  h-[600px]">
+              <div className="w-1/2">
                 <img
                   alt="Image"
                   className="mx-auto aspect-video my-3 h-[800px] w-auto overflow-hidden rounded-xl object-contain object-center sm:w-full lg:order-last"
                   src="/about_us_img.png"
                 />
               </div>
-              <div className="flex flex-col justify-center items-start space-y-4 text-black">
+              <div className="flex flex-col justify-center items-start space-y-4 text-black w-1/2">
                 <div className="space-y-2 poppins-regular">
                   <p className="min-w-[500px] max-w-[600px] text-left text-sm text-black">
                     Our sea memorial service offers families a profoundly unique
@@ -61,7 +62,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="bg-[#BEECFF] w-full min-h-[256px] relative flex items-center justify-center">
+        <section className="bg-[#BEECFF] w-full min-h-[290px] relative flex items-center justify-center">
           <div className="absolute h-full w-full top-0 left-0">
             <img src='/flower_overlay.png' />
           </div>
@@ -73,55 +74,9 @@ export default function Component() {
           </div>
 
         </section>
-        <section className="w-full py-12 flex items-center justify-center md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 flex items-center justify-center md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="text-center space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Testimonials
-              </h2>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Hear from our satisfied customers.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              <div className="p-4 bg-white dark:bg-gray-800 rounded-md shadow-md">
-                <p className="text-gray-500 dark:text-gray-400 italic">
-                  "Experiencing NJ Sea Memorial’s sea burial was beyond our
-                  expectations. The Dauntless provided a comfortable and serene
-                  setting for our family and friends. Saying our final goodbyes
-                  with the ocean and sunset in the background was breathtaking.
-                  Highly recommend this service."
-                </p>
-                <p className="mt-4 text-gray-700 dark:text-gray-300 font-semibold">
-                  - Jessica M. - Point Pleasant Beach, NJ
-                </p>
-              </div>
-              <div className="p-4 bg-white dark:bg-gray-800 rounded-md shadow-md">
-                <p className="text-gray-500 dark:text-gray-400 italic">
-                  "We chose NJ Sea Memorial Service for my father's sea burial,
-                  and it was a decision we'll always be grateful for. The
-                  Nearfall was perfect for my small family and the entire
-                  experience was carefully crafted and Captain Joe was
-                  incredibly flexible with our requests. I can't recommend NJ
-                  Sea Memorial service enough"
-                </p>
-                <p className="mt-4 text-gray-700 dark:text-gray-300 font-semibold">
-                  - David P. - Belmar, NJ
-                </p>
-              </div>
-              <div className="p-4 bg-white dark:bg-gray-800 rounded-md shadow-md">
-                <p className="text-gray-500 dark:text-gray-400 italic">
-                  "An amazing experience aboard the Dauntless. I had never been
-                  a part of an ash scattering before and NJ Sea Memorial service
-                  made it so easy for me. Highly recommended for families
-                  seeking an alternative and heartfelt way to say their final
-                  goodbyes."
-                </p>
-                <p className="mt-4 text-gray-700 dark:text-gray-300 font-semibold">
-                  - Rebecca K. - Manahawkin, NJ
-                </p>
-              </div>
-            </div>
+            <Carousel />
           </div>
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#BEECFF] text-black">

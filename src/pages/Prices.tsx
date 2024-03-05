@@ -1,7 +1,7 @@
 import React from "react";
 import PriceCard from "../components/PriceCard";
 
-interface PricesProps { }
+interface PricesProps {}
 
 const priceItems = [
   {
@@ -43,8 +43,17 @@ const priceItems = [
 ];
 const Prices: React.FC<PricesProps> = () => {
   return (
-    <div className="relative h-[90vh] flex items-center justify-center bg-white">
-      <div className=" max-w-[65%] m-auto flex-wrap gap-x-20 gap-y-6 flex justify-center">
+    <div className="relative flex flex-col pb-40  items-center justify-center bg-white">
+      <div className="flex items-center justify-center py-20">
+        <div>
+          <img src="/assets/decorator.png" />
+        </div>
+        <h2 className="text-3xl font-bold whitespace-nowrap text-black crimson-text-regular tracking-tighter text-left  sm:text-4xl md:text-5xl">
+          Pricing
+        </h2>
+        <div className="w-[1000px] h-[1px] bg-black ml-10" />
+      </div>
+      <div className=" max-w-[85%] m-auto flex-wrap gap-x-20 gap-y-6 flex justify-center">
         {priceItems.map((item) => (
           <PriceCard {...item} />
         ))}

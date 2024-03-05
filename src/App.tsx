@@ -3,7 +3,7 @@ import Component from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Experiences from "./components/experiences";
 import Layout from "./layout/layout";
-import {NFCalendar} from "./components/Calendar";
+import Calendar from "./pages/Calendar";
 import Prices from "./pages/Prices";
 import Booking from "./pages/Booking";
 import TheExperiece from "./pages/TheExperience";
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Component />} />
           <Route path="/experiences" element={<Experiences />} />
-          <Route path="/calendar" element={<NFCalendar />} />
+          <Route path="/calendar" element={<Calendar />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/book/:pkg" element={<Booking />} />
           <Route path="/theexperience" element={<TheExperiece />} />

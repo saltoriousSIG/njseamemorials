@@ -35,7 +35,7 @@ export const NFCalendar = () => {
         const pageDataString = JSON.stringify(pageData);
         const encoded = btoa(pageDataString);
         window.scrollTo(0, 0);
-        navigate(`/book-trip/${encoded}`);
+        navigate(`/book/${encoded}`);
       },
       eventClassNames: function (args: any) {
         if (
@@ -59,10 +59,5 @@ export const NFCalendar = () => {
     //const events = calendar.getEventSources();
   }, [navigate]);
 
-  return (
-    <div className="container !bg-white">
-      <h2>Calendar</h2>
-      <div id="calendar" className="!bg-white"></div>
-    </div>
-  );
+  return <div id="calendar" className="w-full h-[1000px]"></div>
 };

@@ -12,7 +12,7 @@ const pageTitles: Record<string, string> = {
   '/whyseaburial': "Why A Sea Burial",
   '/calendar': "Calendar",
   '/prices': "Prices",
-  '/policies': "Policies"
+  '/policies': "Policies",
 }
 const Layout: React.FC<LayoutProps> = () => {
   const location = useLocation();
