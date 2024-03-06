@@ -22,13 +22,13 @@ const Footer: React.FC<FooterProps> = () => {
             href="https://www.facebook.com/NJSeaMemorials"
             target="_blank"
           >
-            <img height="50" width="50" src="/public/icons/facebook.svg" />
+            <img height="50" width="50" src="/icons/facebook.svg" />
           </a>
           <a href="https://www.instagram.com/nj_sea_memorials/" target="_blank">
-            <img height="50" width="50" src="/public/icons/instagram.svg" />
+            <img height="50" width="50" src="/icons/instagram.svg" />
           </a>
           <a href="mailto:njseamemorials@gmail.com" target="_blank">
-            <img height="50" width="50" src="/public/icons/google.svg" />
+            <img height="50" width="50" src="/icons/google.svg" />
           </a>
         </div>
 
