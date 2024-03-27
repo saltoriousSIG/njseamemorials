@@ -1,19 +1,25 @@
-import React, {useState, useEffect, useMemo} from "react";
-import axios from 'axios';
+import React, { useState, useEffect, useMemo } from "react";
+import axios from "axios";
 import { useParams } from "react-router";
 import Paypal from "../components/Paypal";
 
 interface BookingProps {}
 
 const Booking: React.FC<BookingProps> = ({}) => {
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+  });
   const { pkg } = useParams();
   const data = JSON.parse(atob(pkg as string));
   const [isPaypalShowing, setIsPaypalShowing] = useState<boolean>(false);
 
   const handleSubmit = () => {
-    setIsPaypalShowing(true)
-  }
-  console.log(data)
+    setIsPaypalShowing(true);
+  };
+  console.log(data);
 
   const [dates, setDates] = useState<Array<any>>();
 
@@ -22,19 +28,29 @@ const Booking: React.FC<BookingProps> = ({}) => {
       const calendarData = await axios.get(
         `https://www.googleapis.com/calendar/v3/calendars/6c0cff25d0ecb149ece0c49bdddc02bfa2a772c7f7e590df9aebb2c0302b3327@group.calendar.google.com/events?maxResults=2500&key=AIzaSyA4bsYsAgHd9TprAmhOi0tdySV6FfR-vwQ`
       );
-      const { data: { items } } = calendarData
-      console.log(items)
-      const dates = items.map((item: any) => { 
-        console.log(item)
-        const { start:{ dateTime } } = item;
-        return dateTime;
-      })
-      console.log(dates);
-      setDates(dates);
-    }
-    load()
-  }, []);
+      const {
+        data: { items },
+      } = calendarData;
+      const dates = items.map((item: any) => {
+        const {
+          start: { dateTime },
+          id,
+        } = item;
+        return {
+          id,
+          date: dateTime,
+        };
+      }).sort((a: any,b: any) => {
 
+        const aDate = new Date(a.date).getTime()
+        const bDate = new Date(b.date).getTime()
+        return aDate - bDate;
+      });
+
+      setDates(dates);
+    };
+    load();
+  }, []);
   console.log(dates);
 
   return (
@@ -64,59 +80,24 @@ const Booking: React.FC<BookingProps> = ({}) => {
                 placeholder="Enter your name"
               />
             </div>
+
             <div className="space-y-2">
               <label
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 htmlFor="date"
+                className="text-sm font-medium leading-none"
               >
                 Date
               </label>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:r1c:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                data-placeholder=""
-                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                id="date"
-              >
-                <span style={{ pointerEvents: "none" }}>Select</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-4 w-4 opacity-50"
-                  aria-hidden="true"
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </button>
               <select
-                aria-hidden="true"
-                tabIndex={1}
-                style={{
-                  position: "absolute",
-                  border: "0px",
-                  width: "1px",
-                  height: "1px",
-                  padding: "0px",
-                  margin: "-1px",
-                  overflow: "hidden",
-                  clip: "rect(0px, 0px, 0px, 0px)",
-                  whiteSpace: "nowrap",
-                  overflowWrap: "normal",
-                }}
+                id="date"
+                className="block w-full h-10 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               >
-                <option value=""></option>
+                <option value="">Select</option>
+                {dates?.map((date) => (
+                  <option key={date.id} value={date.id}>
+                    {formatter.format(new Date(date.date))}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -147,12 +128,15 @@ const Booking: React.FC<BookingProps> = ({}) => {
               placeholder="Enter your phone number"
             />
           </div>
-          <button onClick={handleSubmit} className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-400 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          <button
+            onClick={handleSubmit}
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-400 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+          >
             Submit
           </button>
         </div>
       </div>
-      {isPaypalShowing && (<Paypal  id="hi" pageData={{}}/>)}
+      {isPaypalShowing && <Paypal id="hi" pageData={{}} />}
     </div>
   );
 };
