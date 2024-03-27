@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>
         </div>
 
-        <div className="max-w-[200px] text-xl text-center whitespace-wrap">
+        <div className="max-w-[200px] text-xl text-center whitespace-wrap text-white">
           Learn More About The Vessels
         </div>
         <div className="flex flex-col gap-y-1 justify-center items-center w-full">

@@ -8,7 +8,7 @@ const Nav: React.FC<NavProps> = () => {
       <header className="px-4 lg:px-6 h-14 flex items-center bg-transparent justify-center">
         <a
           className="flex items-center justify-cente h-[51px] w-[276px]"
-          href="#"
+          href="/"
         >
           <img className="h-[51px] w-auto" src="/assets/seamemorial_bg.png" />
         </a>

@@ -9,6 +9,7 @@ import Booking from "./pages/Booking";
 import TheExperiece from "./pages/TheExperience";
 import Policies from "./pages/Policies";
 import WhySeaburial from "./pages/WhySeaburial";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/theexperience" element={<TheExperiece />} />
           <Route path="/policies" element={<Policies/>} />
           <Route path="/whyseaburial" element={<WhySeaburial/>} />
+          <Route path="/faq" element={<FAQ />} />
         </Route>
       </Routes>
     </Router>

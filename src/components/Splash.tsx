@@ -35,6 +35,13 @@ const Splash: React.FC<SplashProps> = () => {
                         >
                             Calendar
                         </a>
+
+                        <a
+                            className="inline-flex h-9 items-center justify-center rounded-full border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 text-white hover:text-white"
+                            href="/faq"
+                        >
+                           FAQ 
+                        </a>
                     </div>
                 </div>
             </div>

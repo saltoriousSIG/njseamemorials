@@ -59,5 +59,5 @@ export const NFCalendar = () => {
     //const events = calendar.getEventSources();
   }, [navigate]);
 
-  return <div id="calendar" className="w-full h-[1000px]"></div>
+  return <div id="calendar" className="w-full h-[1000px] container m-auto"></div>
 };

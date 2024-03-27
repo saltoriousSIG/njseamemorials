@@ -13,6 +13,7 @@ const pageTitles: Record<string, string> = {
   '/calendar': "Calendar",
   '/prices': "Prices",
   '/policies': "Policies",
+  '/faq': 'FAQ'
 }
 const Layout: React.FC<LayoutProps> = () => {
   const location = useLocation();
