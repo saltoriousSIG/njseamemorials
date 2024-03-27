@@ -20,8 +20,8 @@ const WhySeaburial: React.FC<WhySeaburialProps> = () => {
             </h2>
             <div className="w-[1000px] h-[1px] bg-black ml-10" />
           </div>
-          <div className="flex items-center m-auto justify-between w-[80%]">
-            <div className="p-6 w-1/2 text-left max-w-[600px]">
+          <div className="flex flex-col lg:flex-row items-center m-auto justify-between w-full">
+            <div className="p-6 w-1/2 text-left w-full">
               <p className="text-gray-600 mb-4">
                 Sea burial, a practice with roots dating back thousands of
                 years, has long been a sought-after final disposition. In the
@@ -43,7 +43,7 @@ const WhySeaburial: React.FC<WhySeaburialProps> = () => {
                 expanse, offers a poignant and symbolic farewell.
               </p>
             </div>
-            <div className="w-1/2 flex items-center justify-center">
+            <div className="w-full lg:w-1/2 flex items-center justify-center hidden lg:flex ">
               <img
                 src="/assets/history.png"
                 alt="Placeholder"

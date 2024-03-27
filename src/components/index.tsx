@@ -4,27 +4,27 @@ export default function Component() {
   return (
     <div key="1" className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section id="about" className="w-full py-12 px-20 md:py-24 lg:py-32 bg-white">
+        <section id="about" className="w-full lg:py-12 lg:px-20 py-10 px-8 bg-white">
           <div className="container px-4 md:px-6 flex flex-col">
             <div className="flex items-center justify-center">
               <div>
                 <img src="/assets/decorator.png" />
               </div>
-              <h2 className="text-3xl font-bold text-black crimson-text-regular tracking-tighter text-left  sm:text-4xl md:text-5xl">
+              <h2 className="text-xl whitespace-nowrap lg:text-3xl font-bold text-black crimson-text-regular tracking-tighter text-left  sm:text-4xl md:text-5xl">
                 About Our Sea Burials
               </h2>
-              <div className="w-[1000px] h-[1px] bg-black ml-10" />
+              <div className="lg:w-[1000px] h-[1px] bg-black ml-10" />
             </div>
 
-            <div className="flex flex-row-reverse w-full items-center justify-between gap-6 w-full m-auto ml-24  h-[600px]">
-              <div className="w-1/2">
+            <div className="flex flex-row-reverse w-full items-center justify-between lg:gap-6 w-full m-auto lg:ml-24  lg:h-[600px]">
+              <div className="w-1/2 hidden lg:flex">
                 <img
                   alt="Image"
                   className="mx-auto aspect-video my-3 h-[800px] w-auto overflow-hidden rounded-xl object-contain object-center sm:w-full lg:order-last"
                   src="/about_us_img.png"
                 />
               </div>
-              <div className="flex flex-col justify-center items-start space-y-4 text-black w-1/2">
+              <div className="flex flex-col justify-center items-start space-y-4 text-black w-full m-auto lg:w-1/2">
                 <div className="space-y-2 poppins-regular">
                   <p className="min-w-[500px] max-w-[600px] text-left text-sm text-black">
                     Our sea memorial service offers families a profoundly unique
@@ -89,33 +89,33 @@ export default function Component() {
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight uppercase crimson-text-regular text-[#0077C0]">
                   Contact Us
                 </h2>
-                <div className="w-[1000px] h-[1px] bg-[#0077C0] ml-10" />
+                <div className=" lg:w-[1000px] h-[1px] bg-[#0077C0] ml-10" />
               </div>
 
 
             </div>
-            <div className="flex items-center justify-center space-x-20 m-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-20 m-auto">
               <div className="flex flex-col w-full space-y-2">
                 <div className="font-bold text-xl underline crimson-text-regular">Nearfall</div>
                 <iframe
                   title="map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.2742434934494!2d-74.03153538469961!3d40.18070987939312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c227e202c1271f%3A0xc8b2beb9c0d03d94!2s905%20NJ-35%2C%20Belmar%2C%20NJ%2007719!5e0!3m2!1sen!2sus!4v1646195218368!5m2!1sen!2sus"
-                  width="600"
-                  height="400"
+                  width="100%"
+                  height="100%"
                 ></iframe>
               </div>
               <div className="w-full space-y-2 flex flex-col">
                 <div className="font-bold text-xl underline crimson-text-regular">Dauntless</div>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8526634636078!2d-74.04234640955569!3d40.1009977979869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c185e3e22805ab%3A0x251d3ede964e74af!2sDauntless%20Sport%20Fishing!5e0!3m2!1sen!2sus!4v1705550874283!5m2!1sen!2sus"
-                  width="600"
-                  height="400"
+                  width="100%"
+                  height="100%"
                   loading="lazy"
                 ></iframe>
               </div>
             </div>
             <div className="w-full flex flex-col mt-10 justify-center items-center">
-              <form className=" min-w-[774px] space-y-4">
+              <form className="w-full lg:min-w-[774px] space-y-4">
                 <div className="space-y-2">
                   <input
                     className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"

@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useMemo} from "react";
+import axios from 'axios';
 import { useParams } from "react-router";
 import Paypal from "../components/Paypal";
 
@@ -12,6 +13,29 @@ const Booking: React.FC<BookingProps> = ({}) => {
   const handleSubmit = () => {
     setIsPaypalShowing(true)
   }
+  console.log(data)
+
+  const [dates, setDates] = useState<Array<any>>();
+
+  useEffect(() => {
+    const load = async () => {
+      const calendarData = await axios.get(
+        `https://www.googleapis.com/calendar/v3/calendars/6c0cff25d0ecb149ece0c49bdddc02bfa2a772c7f7e590df9aebb2c0302b3327@group.calendar.google.com/events?maxResults=2500&key=AIzaSyA4bsYsAgHd9TprAmhOi0tdySV6FfR-vwQ`
+      );
+      const { data: { items } } = calendarData
+      console.log(items)
+      const dates = items.map((item: any) => { 
+        console.log(item)
+        const { start:{ dateTime } } = item;
+        return dateTime;
+      })
+      console.log(dates);
+      setDates(dates);
+    }
+    load()
+  }, []);
+
+  console.log(dates);
 
   return (
     <div className="relative h-fit flex flex-col items-center justify-start mt-10 container m-auto space-y-20 text-black">
