@@ -61,7 +61,7 @@ export default function Component() {
                 <div className="scale-[0.75]">
                   <img src="/assets/decorator.png" />
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight uppercase crimson-text-regular text-[#0077C0]">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight uppercase crimson-text-regular text-[#0077C0] whitespace-nowrap">
                   Contact Us
                 </h2>
                 <div className=" lg:w-[1000px] h-[1px] bg-[#0077C0] ml-10" />
