@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 import { useParams } from "react-router";
 import Paypal from "../components/Paypal";
 
-interface BookingProps {}
+interface BookingProps { }
 
-const Booking: React.FC<BookingProps> = ({}) => {
+const Booking: React.FC<BookingProps> = ({ }) => {
+  const [pageData, setPageData] = useState<Record<string, string>>({})
   const formatter = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "long",
@@ -40,7 +42,7 @@ const Booking: React.FC<BookingProps> = ({}) => {
           id,
           date: dateTime,
         };
-      }).sort((a: any,b: any) => {
+      }).sort((a: any, b: any) => {
 
         const aDate = new Date(a.date).getTime()
         const bDate = new Date(b.date).getTime()
@@ -51,7 +53,7 @@ const Booking: React.FC<BookingProps> = ({}) => {
     };
     load();
   }, []);
-  console.log(dates);
+  console.log(pageData);
 
   return (
     <div className="relative h-fit flex flex-col items-center justify-start mt-10 container m-auto space-y-20 text-black">
@@ -75,6 +77,10 @@ const Booking: React.FC<BookingProps> = ({}) => {
                 Name
               </label>
               <input
+                onChange={(e) => setPageData({
+                  ...pageData,
+                  name: e.target.value
+                })}
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 id="name"
                 placeholder="Enter your name"
@@ -90,11 +96,17 @@ const Booking: React.FC<BookingProps> = ({}) => {
               </label>
               <select
                 id="date"
+                onChange={(e) => {
+                  setPageData({
+                    ...pageData,
+                    scheduledDate: e.target.value
+                  })
+                }}
                 className="block w-full h-10 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               >
                 <option value="">Select</option>
                 {dates?.map((date) => (
-                  <option key={date.id} value={date.id}>
+                  <option key={date.id} value={date.date}>
                     {formatter.format(new Date(date.date))}
                   </option>
                 ))}
@@ -106,9 +118,31 @@ const Booking: React.FC<BookingProps> = ({}) => {
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               htmlFor="email"
             >
+              Number of Attendees
+            </label>
+            <input
+              onChange={(e) => setPageData({
+                ...pageData,
+                attendees: e.target.value
+              })}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="attendees"
+              placeholder="Number of attendees"
+              type="number"
+            />
+          </div>
+          <div className="space-y-2">
+            <label
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              htmlFor="email"
+            >
               Email
             </label>
             <input
+              onChange={(e) => setPageData({
+                ...pageData,
+                email: e.target.value
+              })}
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               id="email"
               placeholder="Enter your email"
@@ -123,6 +157,10 @@ const Booking: React.FC<BookingProps> = ({}) => {
               Phone Number
             </label>
             <input
+              onChange={(e) => setPageData({
+                ...pageData,
+                phone: e.target.value
+              })}
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               id="phone"
               placeholder="Enter your phone number"
@@ -136,7 +174,7 @@ const Booking: React.FC<BookingProps> = ({}) => {
           </button>
         </div>
       </div>
-      {isPaypalShowing && <Paypal id="hi" pageData={{}} />}
+      {isPaypalShowing && <Paypal id={data.id} pageData={pageData} />}
     </div>
   );
 };

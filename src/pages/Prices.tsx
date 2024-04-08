@@ -1,10 +1,11 @@
 import React from "react";
 import PriceCard from "../components/PriceCard";
 
-interface PricesProps {}
+interface PricesProps { }
 
 const priceItems = [
   {
+    id: 15,
     name: "Unattended Seaburial",
     description:
       "An unattended sea burial is a private ceremony where a vessel scatters a loved one's cremated remains at sea, allowing for a serene farewell without the physical presence of family or friends. This option suits families living far away or those uncomfortable with the ocean, as they can still participate in planning to honor the departed's memory.",
@@ -13,6 +14,7 @@ const priceItems = [
     features: ["No additional spectators"],
   },
   {
+    id: 16,
     name: "Small Gathering",
     description: "",
     price: "$650",
@@ -20,6 +22,7 @@ const priceItems = [
     features: ["6 passengers or less"],
   },
   {
+    id: 17,
     name: "Medium Gathering",
     description: "",
     price: "$800",
@@ -27,6 +30,7 @@ const priceItems = [
     features: ["7 - 20 passengers"],
   },
   {
+    id: 18,
     name: "Large Gathering",
     description: "",
     price: "$1000",
@@ -34,6 +38,7 @@ const priceItems = [
     features: ["20 - 49 passengers"],
   },
   {
+    id: 19,
     name: "Giant Gathering",
     description: "",
     price: "$1200",

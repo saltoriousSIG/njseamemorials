@@ -1,6 +1,6 @@
 import React from "react";
 
-interface FAQProps {}
+interface FAQProps { }
 
 const FAQ: React.FC<FAQProps> = () => {
   return (
@@ -8,7 +8,7 @@ const FAQ: React.FC<FAQProps> = () => {
       <div className="space-y-8 text-black">
         {/* FAQ Item 1 */}
         <div className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-2">Where do I Begin?</h2>
+          <h2 className="text-xl font-semibold mb-2">Where do I begin?</h2>
           <p>
             We first want to make sure we have what you are looking for. We
             recommend reviewing our entire website. Additionally, you may call
@@ -34,7 +34,7 @@ const FAQ: React.FC<FAQProps> = () => {
         {/* FAQ Item 3 */}
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-2">
-            How Long Does A trip take?
+            How long does a trip take?
           </h2>
           <p>
             Generally, a sea burial takes about an hour. You will have up to 90
@@ -93,14 +93,14 @@ const FAQ: React.FC<FAQProps> = () => {
             Do we have to bring flowers and do you have any suggestions?
           </h2>
           <p>
-            You do not have to bring flowers, but we have noticed on most trips,
+            You do not have to bring flowers, but we have noticed
             families and friends bring flowers. It certainly adds a beautiful
             touch to the ceremony. Friends and family who are unable to attend
             often send in flowers as well. Typically, the flowers and the ashes
             are spread together in the ocean.
           </p>
           <p>
-            For beautiful options for funeral options,{" "}
+            For beautiful floral arrangements,{" "}
             <a
               href="https://www.800florals.com/category.asp?category=wf&ID=@AF1"
               className="text-blue-500 hover:underline"
@@ -111,6 +111,8 @@ const FAQ: React.FC<FAQProps> = () => {
             </a>
             .
           </p>
+          <p className="italic my-4 font-bold">*Flowers should be delivered to your home in order to be brought on the day of the trip.</p>
+
         </div>
 
         {/* FAQ Item 8 */}
@@ -119,7 +121,7 @@ const FAQ: React.FC<FAQProps> = () => {
             Can we bring food and alcohol?
           </h2>
           <p>
-            beverages. Please only drink alcohol if you are 21 years or older.
+            Yes. You are welcome to bring food and alcoholic beverages. Only drink alcohol if you are 21 years or older.
             If you are having food catered, we recommend you have it delivered
             to you directly and then you bring it to the ceremony. We will help
             get everything set up on board.
@@ -131,8 +133,7 @@ const FAQ: React.FC<FAQProps> = () => {
           <h2 className="text-xl font-semibold mb-2">How should we dress?</h2>
           <p>
             Generally, most people are dressing in semi-formal attire, however,
-            this is entirely up to you and your attendees. Some cultures have
-            traditional wear for funerals. We have also seen people dress very
+            this is entirely up to you and your attendees. We have also seen people dress very
             casually for the occasion. We recommend dressing in layers. The
             ocean at any time of the year is always slightly cooler than
             expected.
@@ -145,7 +146,7 @@ const FAQ: React.FC<FAQProps> = () => {
             Do we receive any documentation regarding the burial?
           </h2>
           <p>
-            Yes. In the following days after the ceremony, we will send a signed
+            Yes. In the following days after the ceremony, we will mail a signed
             certification document with all necessary information regarding the
             interment.
           </p>
