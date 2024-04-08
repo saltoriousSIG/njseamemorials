@@ -80,28 +80,28 @@ const Policies: React.FC<PoliciesProps> = () => {
       <section className="rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-3">What to Bring</h2>
         <ul className="list-disc pl-5">
-          <li className="list-none">
+          <li className="list-none mb-2">
             You are permitted to bring your own food and beverages, and we advise smaller coolers for carry-on.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             For food, we advise pre-packaged meals and sandwiches. You are welcome to have your ceremony catered. **The catering needs to be punctual due to the likelihood of other trips being booked before and/or after your ceremony.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             Flowers, special items for your sea burial, and clergymen of all faiths are all welcome aboard.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             Items to be placed in the water should not include plastic and oil products.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             Excessive drinking is not permitted.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             Always dress appropriately for the seasonal conditions; evenings are cooler than you expect. We advise you to dress in layers.
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             Children 12 and under must wear a life jacket (USCG regulation).
           </li>
-          <li className="list-none">
+          <li className="list-none mb-2">
             If you are prone to motion sickness, please take medication before the trip. Follow the manufacturers’ directions to ensure proper dosage prior to travel. Examples include Scopolamine, Dramamine, and Bonine.
           </li>
 
