@@ -13,6 +13,8 @@ const Booking: React.FC<BookingProps> = ({ }) => {
     month: "long",
     day: "numeric",
     weekday: "long",
+    hour: 'numeric',
+    minute: '2-digit',
   });
   const { pkg } = useParams();
   const data = JSON.parse(atob(pkg as string));
