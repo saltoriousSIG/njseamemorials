@@ -79,7 +79,7 @@ const Policies: React.FC<PoliciesProps> = () => {
 
       <section className="rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-3">What to Bring</h2>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc">
           <li className="list-none mb-2">
             You are permitted to bring your own food and beverages, and we advise smaller coolers for carry-on.
           </li>
