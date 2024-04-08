@@ -1,8 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
-import MobileNav from "./MobileNav";
 
-interface SplashProps {}
+interface SplashProps { }
 
 const Splash: React.FC<SplashProps> = () => {
   return (
