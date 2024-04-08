@@ -56,8 +56,13 @@ const Prices: React.FC<PricesProps> = () => {
         <h2 className="text-3xl font-bold whitespace-nowrap text-black crimson-text-regular tracking-tighter text-left  sm:text-4xl md:text-5xl">
           Pricing
         </h2>
+
         <div className="w-[1000px] h-[1px] bg-black ml-10" />
       </div>
+      <div className="w-full h-fit text-black mb-14 italic font-bold">
+        If a religious representative will be present, they will be included in the  gathering size
+      </div>
+
       <div className=" max-w-[85%] m-auto flex-wrap gap-x-20 gap-y-6 flex justify-center">
         {priceItems.map((item) => (
           <PriceCard {...item} />

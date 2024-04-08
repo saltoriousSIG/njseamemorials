@@ -16,7 +16,7 @@ export default function Component() {
               <div className="lg:w-[1000px] h-[1px] bg-black ml-10" />
             </div>
 
-            <div className="flex flex-row-reverse w-full items-center justify-between lg:gap-6 w-full m-auto lg:ml-24  lg:h-[600px]">
+            <div className="flex flex-row-reverse w-full items-center justify-between lg:gap-6 m-auto lg:ml-24  lg:h-[600px]">
               <div className="w-1/2 hidden lg:flex">
                 <img
                   alt="Image"
@@ -25,37 +25,12 @@ export default function Component() {
                 />
               </div>
               <div className="flex flex-col justify-center items-start space-y-4 text-black w-full m-auto lg:w-1/2">
-                <div className="space-y-2 poppins-regular">
-                  <p className="min-w-[500px] max-w-[600px] text-left text-sm text-black">
-                    Our sea memorial service offers families a profoundly unique
-                    and deeply personal alternative for laying their loved ones
-                    to rest. We understand that every individual is unique, and
-                    their final farewell should reflect the essence of their
-                    life. Our service allows families to craft a truly special
-                    and customized ceremony, transforming the act of scattering
-                    ashes into a deeply meaningful experience. Unlike
-                    traditional funerals, our sea memorial service is entirely
-                    private, providing an intimate setting where families can
-                    gather for a final farewell. This exclusivity ensures that
-                    the ceremony becomes a sacred and personal moment, allowing
-                    for genuine connections and shared memories. The vastness of
-                    the ocean serves as the perfect backdrop, enhancing the
-                    spiritual and emotional aspects of the farewell.
+                <div className="space-y-2 poppins-regular text-lg">
+                  <p className="min-w-[500px] max-w-[600px] text-left  text-black">
+                    New Jersey Sea Memorials offers families a unique and personal alternative for laying loved ones to rest. Our service allows families to craft a special and customized ceremony, transforming the act of scattering ashes into a meaningful experience. Unlike traditional funerals, a sea memorial service is entirely private, providing an intimate setting where families can gather for a final farewell. We can accommodate unattended burials for families who are out of state or unable to comfortably be out at sea, and can also hold gatherings for groups of any size.
                   </p>
-                  <p className="max-w-[600px] text-sm text-left text-black">
-                    Our commitment to customization means that families have the
-                    freedom to design the ceremony in a way that resonates with
-                    their cherished memories and the personality of their
-                    departed loved one. Every detail can be tailored to create a
-                    truly unique and special sea burial experience. We recognize
-                    the importance of providing families with the opportunity to
-                    express their grief in a way that feels authentic and
-                    meaningful to them. The ceremony becomes a celebration of
-                    life, love, and the enduring connection shared with the
-                    departed. In this private and personalized setting, families
-                    can find solace and comfort making the sea memorial service
-                    a profoundly special and healing experience during a
-                    challenging time.
+                  <p className="max-w-[600px] text-left text-black">
+                    Our commitment to customization means that families have the freedom to design the ceremony. This can include your loved ones’ favorite food, pictures, flowers, and music. Every detail can be tailored to create a truly unique and special sea burial experience. The ceremony becomes a celebration of life, love, and the enduring connection shared with the departed. In this private and personalized setting, families can find solace and comfort making the sea memorial service a profoundly special and healing experience during a challenging time.
                   </p>
                 </div>
               </div>
@@ -118,28 +93,28 @@ export default function Component() {
               <form className="w-full lg:min-w-[774px] space-y-4">
                 <div className="space-y-2">
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="placeholder-slate-800 *:flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="name"
                     placeholder="Name"
                   />
                 </div>
                 <div className="space-y-2">
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="placeholder-slate-800 flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="phone-number"
                     placeholder="Phone Number"
                   />
                 </div>
                 <div className="space-y-2">
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="placeholder-slate-800 flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="email"
                     placeholder="Email"
                   />
                 </div>
                 <div className="space-y-2">
                   <textarea
-                    className="flex w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[100px]"
+                    className="placeholder-slate-800 flex w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[100px]"
                     id="message"
                     placeholder="Enter your message"
                   ></textarea>
