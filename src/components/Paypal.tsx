@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-// import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import swal from "sweetalert";
 import axios from "axios";
+import { OnApproveBraintreeActions, OnApproveBraintreeData } from "@paypal/react-paypal-js";
 
 interface PaypalProps {
-  id: string;
-  pageData: any;
+  id: number;
+  pageData: Record<string, string>;
 }
 
 const Paypal: React.FC<PaypalProps> = (props) => {
@@ -13,8 +13,8 @@ const Paypal: React.FC<PaypalProps> = (props) => {
 
   const url = useMemo(() => {
     if (import.meta.env.REACT_APP_ENVIRONMENT === "development")
-      return "http://localhost:5000/api/paypal";
-    return "https://nearfall-paypal.herokuapp.com/api/paypal";
+      return "http://localhost:5000/api/seaburial_paypal";
+    return "https://nearfall-paypal.herokuapp.com/api/seaburial_paypal";
   }, [import.meta.env.REACT_APP_ENVIRONMENT]);
 
   const baseUrl = useMemo(() => {
@@ -40,9 +40,9 @@ const Paypal: React.FC<PaypalProps> = (props) => {
             });
         },
         // Finalize the transaction after payer approval
-        onApprove:  (data: any, actions: any) => {
+        onApprove: (data: OnApproveBraintreeData, actions: OnApproveBraintreeActions) => {
           console.log(data)
-          return actions.order.capture().then(function (orderData: any) {
+          return actions.order?.capture().then(function (orderData: any) {
             // Successful capture! For dev/demo purposes:
             console.log(
               "Capture result",
@@ -60,11 +60,6 @@ const Paypal: React.FC<PaypalProps> = (props) => {
                 ...pageData,
               }
             );
-
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // const element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
           });
         },
       })
@@ -75,8 +70,8 @@ const Paypal: React.FC<PaypalProps> = (props) => {
 
   const handlePolicyAccept = useCallback((e: any) => {
     e.preventDefault();
-    if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
-    if (!pageData.scheduledDate) return swal ('Error', 'You forgot to select a date!', 'error');
+    if (!pageData.name || !pageData.email || !pageData.phone || !pageData.attendees) return swal('Error', 'You forgot to enter something!', 'error');
+    if (!pageData.scheduledDate) return swal('Error', 'You forgot to select a date!', 'error');
     const link = document.createElement("a");
     link.innerHTML = "Boat Policy";
     link.setAttribute(
@@ -95,43 +90,6 @@ const Paypal: React.FC<PaypalProps> = (props) => {
 
   if (acceptPolicy) {
     return (
-      //   <PayPalScriptProvider
-      //     options={{
-      //       "client-id":
-      //         "AUgmJJNkO3cRmnWl2gHs-Fho4sAOEPgIH2PXW2HQKaVDRpEZUZdciclNiAq-ip9MGmAQM2RCnbFPkiwI",
-      //       components: "buttons",
-      //       currency: "USD",
-      //     }}
-      //   >
-
-      //     <PayPalButtons
-      //       createOrder={(data, actions) => {
-      //         axios
-      //           .post(url, {
-      //             items: [{ id: props.id }],
-      //           })
-      //           .then((response) => console.log(response))
-      //           .catch((err) => console.log(err));
-
-      //         return actions.order.create({
-      //           purchase_units: [
-      //             {
-      //               amount: {
-      //                 value: 1,
-      //               },
-      //             },
-      //           ],
-      //         });
-      //       }}
-      //       onApprove={(data, actions) => {
-      //         return actions.order.capture().then((details) => {
-      //           const name = details.payer.name.given_name;
-      //           alert(`Transaction completed by ${name}`);
-      //         });
-      //       }}
-      //     />
-      //   </PayPalScriptProvider>
-
       <div>
         <div id="paypal-button-container"></div>
       </div>

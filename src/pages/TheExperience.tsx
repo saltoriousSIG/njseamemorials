@@ -53,12 +53,7 @@ const TheExperiece = () => {
                 Customized Ceremony
               </h2>
               <p className="text-gray-600">
-                Upon arrival at the ceremony site, families are invited to
-                engage in a customized ceremony that truly reflects the essence
-                of their loved one's life. Set against the vastness of the
-                ocean, this intimate moment allows for the sharing of memories
-                and stories, creating an emotionally resonant experience over
-                15-30 minutes.
+                Upon arrival at the ceremony site, families are invited to engage in a customized ceremony that truly reflects the essence of their loved one's life. Set against the vastness of the ocean, this intimate moment allows for the sharing of memories and stories, creating an memorable experience over 15-30 minutes.
               </p>
             </div>
           </div>

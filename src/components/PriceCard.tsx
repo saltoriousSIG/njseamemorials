@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 
 interface PriceCardProps {
+  id: number;
   name: string;
   description: string;
   price: string;
@@ -9,8 +10,9 @@ interface PriceCardProps {
 }
 
 const PriceCard: React.FC<PriceCardProps> = ({
+  id,
   name,
-  description, 
+  description,
   price,
   features
 }) => {
@@ -18,6 +20,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
 
   const handleClick = () => {
     const item = {
+      id,
       name,
       description,
       price,
@@ -36,7 +39,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
           <ul className="text-gray-600 dark:text-gray-800 text-sm mb-4 font-bold">
             {features.map((feat) => (<li>{feat}</li>))}
           </ul>
-          <button onClick={handleClick} className="inline-flex text-black w-[147px] items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground h-10 px-4 py-2 w-full rounded-[100px] bg-[#BEECFF]">
+          <button onClick={handleClick} className="inline-flex text-black items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground h-10 px-4 py-2 w-full rounded-[100px] bg-[#BEECFF]">
             Book Now
           </button>
         </div>
