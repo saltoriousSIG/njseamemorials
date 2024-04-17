@@ -81,7 +81,7 @@ const Paypal: React.FC<PaypalProps> = (props) => {
     link.innerHTML = "Boat Policy";
     link.setAttribute(
       "href",
-      "https://www.nearfallfishingcharters.com/policies"
+      "https://www.njseamemorials.com/policies"
     );
     swal("", `Please confirm that you have reviewed our`, "info", {
       buttons: ["Cancel", "Confirm"],
