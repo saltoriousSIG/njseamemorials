@@ -7,7 +7,7 @@ const Nav: React.FC<NavProps> = () => {
   return (
     <div>
       <MobileNav />
-      <header className="px-4 hidden lg:flex lg:px-6 h-14 items-center bg-transparent justify-center">
+      <header className="px-4 hidden lg:flex lg:px-6 h-14 items-center bg-transparent justify-center border-b-[2.5px] border-b-[#234751]/20 border-b-solid pb-20 pt-10">
         <a
           className="flex items-center justify-cente h-[51px] w-[276px]"
           href="/"
@@ -41,15 +41,15 @@ const Nav: React.FC<NavProps> = () => {
           </a>
           <a
             className="text-lg hover:text-white font-medium hover:underline underline-offset-4 text-[#1E1E1E]"
-            href="/calendar"
-          >
-            Calendar
-          </a>
-          <a
-            className="text-lg hover:text-white font-medium hover:underline underline-offset-4 text-[#1E1E1E]"
             href="/prices"
           >
             Prices
+          </a>
+          <a
+            className="text-lg hover:text-white font-medium hover:underline underline-offset-4 text-[#1E1E1E]"
+            href="/booking"
+          >
+            Booking 
           </a>
           <a
             className="text-lg hover:text-white font-medium hover:underline underline-offset-4 text-[#1E1E1E]"
@@ -58,26 +58,10 @@ const Nav: React.FC<NavProps> = () => {
             Policies
           </a>
 
-          <a
-            className="bg-[#1E1E1E] px-2.5 py-1.5 rounded-lg hover:cursor-pointer space-x-2 flex"
-            href="https://www.anrdoezrs.net/click-101096395-10281236"
-            target="_blank"
-          >
-            <div>
-              <img src="/flower_vector.png" height="24" width="24" />
-            </div>
-            <span className="text-white">Flowers</span>
-          </a>
-
           <div className="flex flex-col gap-y-2">
-            <div className="flex bg-[#1E1E1E] px-4 py-1.5 rounded-lg space-x-1.5">
-              <div className="scale-[0.75]">
-                <img src="/icons/call_icon.png" height="24" width="24" />
-              </div>
-              <a href="tel:+17328924298" className="text-white hover:underline">
-                732-892-4298
-              </a>
-            </div>
+            <a className="text-xl text-black font-bold" href="/booking">
+              Need Help?
+            </a>
             <div className="flex bg-[#1E1E1E] px-4 py-1.5 rounded-lg space-x-1.5">
               <div className="scale-[0.75]">
                 <img src="/icons/call_icon.png" height="24" width="24" />
@@ -85,6 +69,14 @@ const Nav: React.FC<NavProps> = () => {
               <a href="tel:+17322325620" className="text-white hover:underline">
                 {" "}
                 732-232-5620
+              </a>
+            </div>
+            <div className="flex bg-[#1E1E1E] px-4 py-1.5 rounded-lg space-x-1.5">
+              <div className="scale-[0.75]">
+                <img src="/icons/call_icon.png" height="24" width="24" />
+              </div>
+              <a href="tel:+17328924298" className="text-white hover:underline">
+                732-892-4298
               </a>
             </div>
           </div>

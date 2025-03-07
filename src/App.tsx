@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Component />} />
           <Route path="/experiences" element={<Experiences />} />
-          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/booking" element={<Calendar />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/book/:pkg" element={<Booking />} />
           <Route path="/theexperience" element={<TheExperiece />} />

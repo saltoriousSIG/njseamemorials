@@ -10,7 +10,7 @@ interface LayoutProps { }
 const pageTitles: Record<string, string> = {
   '/theexperience': "The Experience",
   '/whyseaburial': "Why A Sea Burial",
-  '/calendar': "Calendar",
+  '/booking': "Booking",
   '/prices': "Prices",
   '/policies': "Policies",
   '/faq': 'FAQ'

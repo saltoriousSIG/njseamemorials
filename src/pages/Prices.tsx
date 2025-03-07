@@ -45,6 +45,14 @@ const priceItems = [
     deposit: 0.3,
     features: ["50 up to max of 150 passengers"],
   },
+  {
+    id: 20,
+    name: "Celebration of Life",
+    description: "",
+    price: "$2000",
+    deposit: 0.3,
+    features: ["Max of 150 passengers"],
+  },
 ];
 const Prices: React.FC<PricesProps> = () => {
   return (

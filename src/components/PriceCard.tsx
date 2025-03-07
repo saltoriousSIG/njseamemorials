@@ -28,7 +28,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
     }
     const stringedItem = JSON.stringify(item);
     const encodedItem = btoa(stringedItem);
-    navigate(`/book/${encodedItem}`);
+    navigate(`/booking`);
   }
   return (
     <a className="w-[587px] shadow-2xl bg-[#f6f6f6] rounded-[18px] text-slate-800" href="#">

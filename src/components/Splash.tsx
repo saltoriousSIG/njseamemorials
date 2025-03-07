@@ -5,7 +5,7 @@ interface SplashProps { }
 
 const Splash: React.FC<SplashProps> = () => {
   return (
-    <section className="relative w-full p-5 pt-10 h-[100vh] bg-[url('/assets/hero.png')] bg-no-repeat bg-cover bg-center">
+    <section className="relative w-full p-12 pt-10 h-[100vh] bg-[url('/assets/hero.png')] bg-no-repeat bg-cover bg-center">
       <div className="relative z-20">
         <Nav />
       </div>

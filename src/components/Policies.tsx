@@ -10,7 +10,7 @@ const Policies: React.FC<PoliciesProps> = () => {
           Trip Deposit/Balances
         </h2>
         <p className="mb-2 font-bold">
-          A 30% deposit is required for all ATTENDED sea burials. UNATTENDED sea burials will be paid in full at time of booking.
+          A 20% deposit is required for all ATTENDED sea burials. UNATTENDED sea burials will be paid in full at time of booking.
         </p>
         <p className="mb-2">
           Deposits are to be paid on the day of booking via NJSEAMEMORIALS.com.
@@ -82,9 +82,6 @@ const Policies: React.FC<PoliciesProps> = () => {
         <ul className="list-disc">
           <li className="list-none mb-2">
             You are permitted to bring your own food and beverages, and we advise smaller coolers for carry-on.
-          </li>
-          <li className="list-none mb-2">
-            For food, we advise pre-packaged meals and sandwiches. You are welcome to have your ceremony catered. **The catering needs to be punctual due to the likelihood of other trips being booked before and/or after your ceremony.
           </li>
           <li className="list-none mb-2">
             Flowers, special items for your sea burial, and clergymen of all faiths are all welcome aboard.
