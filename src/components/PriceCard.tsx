@@ -10,24 +10,22 @@ interface PriceCardProps {
 }
 
 const PriceCard: React.FC<PriceCardProps> = ({
-  id,
   name,
-  description,
   price,
   features
 }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const item = {
-      id,
-      name,
-      description,
-      price,
-      features
-    }
-    const stringedItem = JSON.stringify(item);
-    const encodedItem = btoa(stringedItem);
+    //const item = {
+    //  id,
+    //  name,
+    //  description,
+    //  price,
+    //  features
+    //}
+    //const stringedItem = JSON.stringify(item);
+    //const encodedItem = btoa(stringedItem);
     navigate(`/booking`);
   }
   return (
